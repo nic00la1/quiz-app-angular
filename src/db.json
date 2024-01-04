@@ -141,6 +141,19 @@
       ]
     }
   ],
-  "quizs": [],
+  "quizs": [
+    {
+      "id": 1,
+      "name": "JavaScript Quiz 1",
+      "code": "jsquiz01",
+      "questions": [1, 2, 3, 5]
+    },
+    {
+      "id": 2,
+      "name": "JavaScript Quiz 2",
+      "code": "jsquiz02",
+      "questions": [1, 2, 3, 4, 5]
+    }
+  ],
   "quizResults": []
 }
