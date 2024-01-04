@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-quiz-join',
   standalone: true,
-  imports: [],
+  imports: [MatInputModule, MatButtonModule],
   templateUrl: './quiz-join.component.html',
-  styleUrl: './quiz-join.component.css'
+  styleUrl: './quiz-join.component.css',
 })
-export class QuizJoinComponent {
-
-}
+export class QuizJoinComponent {}
