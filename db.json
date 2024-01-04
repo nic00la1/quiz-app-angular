@@ -2,7 +2,7 @@
   "questions": [
     {
       "id": 1,
-      "content": "What will be output of \nlet a=1;\nlet b=2;\nconsole.log(a===b);",
+      "content": "What will be output of \nlet a=\"1\";\nlet b= 1;\nconsole.log(a===b);",
       "marks": 1,
       "negativeMarks": 1,
       "options": [
@@ -13,130 +13,130 @@
         },
         {
           "id": "b",
-          "content": "2",
-          "isCorrect": false
-        },
-        {
-          "id": "c",
           "content": "true",
           "isCorrect": false
         },
         {
-          "id": "d",
+          "id": "c",
           "content": "false",
           "isCorrect": true
+        },
+        {
+          "id": "d",
+          "content": "error",
+          "isCorrect": false
         }
       ]
     },
     {
       "id": 2,
-      "content": "What will be output of \nlet a=1;\nlet b=2;\nconsole.log(a!==b);",
+      "content": "what will be output of below code ?\n(function() {\n\tvar a = Object.create({\n\t\tfoo: 'foo'\n\t});\n\tvar b= Object.create(a);\n\tconsole.log(a== b);\n\tconsole.log(a=== b);\n}());",
       "marks": 1,
       "negativeMarks": 1,
       "options": [
         {
           "id": "a",
-          "content": "1",
+          "content": "true false",
           "isCorrect": false
         },
         {
           "id": "b",
-          "content": "2",
-          "isCorrect": false
-        },
-        {
-          "id": "c",
-          "content": "true",
+          "content": "false false",
           "isCorrect": true
         },
         {
+          "id": "c",
+          "content": "false false",
+          "isCorrect": false
+        },
+        {
           "id": "d",
-          "content": "false",
+          "content": "true true",
           "isCorrect": false
         }
       ]
     },
     {
       "id": 3,
-      "content": "What will be output of \nlet a=1;\nlet b=2;\nconsole.log(a>b);",
+      "content": "What will be output of below code?\nlet c = 30;\nif (c === 30) {\n  let c = 31;\n}\nconsole.log(c); ",
       "marks": 1,
       "negativeMarks": 1,
       "options": [
         {
           "id": "a",
-          "content": "1",
+          "content": "31",
           "isCorrect": false
         },
         {
           "id": "b",
-          "content": "2",
-          "isCorrect": false
+          "content": "30",
+          "isCorrect": true
         },
         {
           "id": "c",
-          "content": "true",
+          "content": "undefined",
           "isCorrect": false
         },
         {
           "id": "d",
-          "content": "false",
-          "isCorrect": true
+          "content": "error",
+          "isCorrect": false
         }
       ]
     },
     {
       "id": 4,
-      "content": "What will be output of \nlet a=1;\nlet b=2;\nconsole.log(a<b);",
+      "content": "What will be output of console.log(!!0)",
       "marks": 1,
       "negativeMarks": 1,
       "options": [
         {
           "id": "a",
-          "content": "1",
+          "content": "0",
           "isCorrect": false
         },
         {
           "id": "b",
-          "content": "2",
-          "isCorrect": false
+          "content": "false",
+          "isCorrect": true
         },
         {
           "id": "c",
           "content": "true",
-          "isCorrect": true
+          "isCorrect": false
         },
         {
           "id": "d",
-          "content": "false",
+          "content": "1",
           "isCorrect": false
         }
       ]
     },
     {
       "id": 5,
-      "content": "What will be output of \nlet a=1;\nlet b=2;\nconsole.log(a>=b);",
+      "content": "What will be output of \nconsole.log(0+5+\"a\"+4)",
       "marks": 1,
       "negativeMarks": 1,
       "options": [
         {
           "id": "a",
-          "content": "1",
+          "content": "9a",
           "isCorrect": false
         },
         {
           "id": "b",
-          "content": "2",
-          "isCorrect": false
+          "content": "05a4",
+          "isCorrect": true
         },
         {
           "id": "c",
-          "content": "true",
+          "content": "5a4",
           "isCorrect": false
         },
         {
           "id": "d",
-          "content": "false",
-          "isCorrect": true
+          "content": "error",
+          "isCorrect": false
         }
       ]
     }
@@ -144,13 +144,13 @@
   "quizs": [
     {
       "id": 1,
-      "name": "JavaScript Quiz 1",
+      "name": "Javascript quiz 1",
       "code": "jsquiz01",
       "questions": [1, 2, 3, 5]
     },
     {
-      "id": 2,
-      "name": "JavaScript Quiz 2",
+      "id": 1,
+      "name": "Javascript quiz 2",
       "code": "jsquiz02",
       "questions": [1, 2, 3, 4, 5]
     }
