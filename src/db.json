@@ -1,0 +1,146 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "content": "What will be output of \nlet a=1;\nlet b=2;\nconsole.log(a===b);",
+      "marks": 1,
+      "negativeMarks": 1,
+      "options": [
+        {
+          "id": "a",
+          "content": "1",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "content": "2",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "content": "true",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "content": "false",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "content": "What will be output of \nlet a=1;\nlet b=2;\nconsole.log(a!==b);",
+      "marks": 1,
+      "negativeMarks": 1,
+      "options": [
+        {
+          "id": "a",
+          "content": "1",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "content": "2",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "content": "true",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "content": "false",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "content": "What will be output of \nlet a=1;\nlet b=2;\nconsole.log(a>b);",
+      "marks": 1,
+      "negativeMarks": 1,
+      "options": [
+        {
+          "id": "a",
+          "content": "1",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "content": "2",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "content": "true",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "content": "false",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "content": "What will be output of \nlet a=1;\nlet b=2;\nconsole.log(a<b);",
+      "marks": 1,
+      "negativeMarks": 1,
+      "options": [
+        {
+          "id": "a",
+          "content": "1",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "content": "2",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "content": "true",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "content": "false",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "content": "What will be output of \nlet a=1;\nlet b=2;\nconsole.log(a>=b);",
+      "marks": 1,
+      "negativeMarks": 1,
+      "options": [
+        {
+          "id": "a",
+          "content": "1",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "content": "2",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "content": "true",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "content": "false",
+          "isCorrect": true
+        }
+      ]
+    }
+  ],
+  "quizs": [],
+  "quizResults": []
+}
