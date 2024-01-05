@@ -21,9 +21,15 @@
     </div>
     }
     <div class="w-full flex justify-end">
+      @if(currentQuestionNo==quizInfo.questions.length -1){
+      <button mat-raised-button color="primary" (click)="submit()">
+        Submit
+      </button>
+      }@else {
       <button mat-raised-button color="primary" (click)="next()">
         Save & Next
       </button>
+      }
     </div>
   </div>
   }

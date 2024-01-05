@@ -51,4 +51,39 @@ export class QuizComponent implements OnInit {
     this.currentQuestionNo++;
     this.currentSelectedOptionId = '';
   }
+
+  submit() {
+    this.next();
+    this.calculateResult();
+    this.router.navigateByUrl('/quiz-score');
+  }
+
+  calculateResult() {
+    let score = 0;
+    let correct = 0;
+    let inCorrect = 0;
+    let unAttempt = 0;
+    let percentage = 0;
+    let totalMark = 0;
+
+    this.quizResult.response?.forEach((response) => {
+      let questionId = response.questionId;
+      let selectedOptionId = response.answerOptionId;
+      let question = this.questions.find((x) => x.id == questionId);
+      let correctOption = question?.options.find((x) => x.isCorrect == true);
+
+      totalMark += question!.marks;
+      if (!selectedOptionId) {
+        unAttempt++;
+        return;
+      } else if (selectedOptionId == correctOption?.id) {
+        correct++;
+        score += question!.marks;
+      } else {
+        inCorrect++;
+        score -= question!.negativeMarks;
+      }
+    });
+    percentage = Math.round((score / totalMark) * 100);
+  }
 }
