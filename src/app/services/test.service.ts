@@ -21,4 +21,8 @@ export class TestService {
       quizResult
     );
   }
+
+  getQuizById(id: number) {
+    return this.http.get<Quiz>(`http://localhost:3000/quizs?code=${id}`);
+  }
 }
