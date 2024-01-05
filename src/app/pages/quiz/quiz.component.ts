@@ -40,4 +40,6 @@ export class QuizComponent implements OnInit {
     let qustionId = this.quizInfo.questions[this.currentQuestionNo];
     return this.questions.find((x) => x.id == qustionId);
   }
+
+  currentSelectedOptionId: string = '';
 }

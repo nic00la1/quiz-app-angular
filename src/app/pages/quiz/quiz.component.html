@@ -1,20 +1,26 @@
 <div class="flex justify-center">
+  @if(currentQuestion) {
   <div
     class="flex flex-col items-center w-6/12 mt-32 gap-2 shadow p-8 bg-neutral-700"
   >
     <h4 class="text-rose-50 font-bold text-lg">{{ quizInfo.name }}</h4>
     <div class="w-full p-4 shadow bg-neutral-800 text-rose-50 mb-2">
-      <p>Question content</p>
+      <p>{{ currentQuestion.content }}</p>
     </div>
+    @for(option of currentQuestion.options; track option) {
     <div
-      class="w-full flex items-center p-4 shadow bg-neutral-800 text-rose-50 mb-2"
+      class="w-full flex items-center p-4 shadow bg-neutral-800 text-rose-50 mb-2 cursor-pointer"
+      (click)="currentSelectedOptionId = option.id"
     >
       <mat-radio-button
         class="example-radio-button"
-        [value]="''"
+        [value]="option.id"
+        [checked]="currentSelectedOptionId === option.id"
       ></mat-radio-button>
-      <p class="text-center">Answer 1</p>
+      <p class="text-center">{{ option.content }}</p>
     </div>
+    }
     <button mat-raised-button color="primary" class="w-6/12">Start</button>
   </div>
+  }
 </div>
