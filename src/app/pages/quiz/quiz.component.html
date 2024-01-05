@@ -20,7 +20,11 @@
       <p class="text-center">{{ option.content }}</p>
     </div>
     }
-    <button mat-raised-button color="primary" class="w-6/12">Start</button>
+    <div class="w-full flex justify-end">
+      <button mat-raised-button color="primary" (click)="next()">
+        Save & Next
+      </button>
+    </div>
   </div>
   }
 </div>

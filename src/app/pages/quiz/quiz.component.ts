@@ -42,4 +42,13 @@ export class QuizComponent implements OnInit {
   }
 
   currentSelectedOptionId: string = '';
+
+  next() {
+    this.quizResult.response?.push({
+      questionId: this.currentQuestion!.id,
+      answerOptionId: this.currentSelectedOptionId,
+    });
+    this.currentQuestionNo++;
+    this.currentSelectedOptionId = '';
+  }
 }
