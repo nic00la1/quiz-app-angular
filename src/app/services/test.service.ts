@@ -11,6 +11,6 @@ export class TestService {
   constructor() {}
 
   getQuizByCode(code: string) {
-    return this.http.get<Quiz[]>('http://localhost:3000/quizs');
+    return this.http.get<Quiz[]>(`http://localhost:3000/quizs?code=${code}`);
   }
 }
