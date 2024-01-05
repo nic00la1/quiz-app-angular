@@ -1,4 +1,3 @@
-import { QuizScoreComponent } from './../pages/quiz-score/quiz-score.component';
 export interface Quiz {
   id: number;
   name: string;

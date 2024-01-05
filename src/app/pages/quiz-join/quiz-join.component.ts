@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
+import { TestService } from '../../services/test.service';
 
 @Component({
   selector: 'app-quiz-join',
@@ -13,10 +14,13 @@ import { FormsModule } from '@angular/forms';
 export class QuizJoinComponent {
   code!: string;
   name!: string;
+  testService = inject(TestService);
 
   join() {
     if (this.code && this.name) {
-      console.log(this.code, this.name);
+      this.testService.getQuizByCode(this.code).subscribe((result) => {
+        console.log(result);
+      });
     } else {
       alert('Please enter a code and a name');
     }
