@@ -21,10 +21,13 @@ export class QuizJoinComponent {
     if (this.code && this.name) {
       this.testService.getQuizByCode(this.code).subscribe((result) => {
         let quiz = result[0];
-        let UserQuiz: QuizResult = {
+        let quizResult: QuizResult = {
           name: this.name,
           quizId: quiz.id,
         };
+        this.testService.joinQuiz(quizResult).subscribe((response) => {
+          console.log(response);
+        });
       });
     } else {
       alert('Please enter a code and a name');

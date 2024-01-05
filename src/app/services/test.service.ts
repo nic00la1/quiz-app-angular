@@ -14,5 +14,10 @@ export class TestService {
     return this.http.get<Quiz[]>(`http://localhost:3000/quizs?code=${code}`);
   }
 
-  joinQuiz(quizResult: QuizResult) {}
+  joinQuiz(quizResult: QuizResult) {
+    return this.http.post<QuizResult>(
+      `http://localhost:3000/quizResults?`,
+      quizResult
+    );
+  }
 }
