@@ -6,7 +6,11 @@ import { Quiz, QuizResult } from '../types';
   providedIn: 'root',
 })
 export class TestService {
-  quizResult!: QuizResult;
+  quizResult: QuizResult = {
+    name: 'Nicola',
+    quizId: 1,
+    id: 3,
+  };
   http = inject(HttpClient);
 
   constructor() {}
