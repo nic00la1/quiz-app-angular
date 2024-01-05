@@ -20,12 +20,13 @@ export interface Option {
 }
 
 export interface QuizResult {
-  id: number;
+  id?: number;
+  quizId: number;
   name: string;
-  score: number;
-  percentage: number;
-  correct: number;
-  inCorrect: number;
-  unAttempt: number;
-  response: { questionId: number; answerOptionId: string }[];
+  score?: number;
+  percentage?: number;
+  correct?: number;
+  inCorrect?: number;
+  unAttempt?: number;
+  response?: { questionId: number; answerOptionId: string }[];
 }

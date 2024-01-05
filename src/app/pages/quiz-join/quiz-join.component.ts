@@ -1,3 +1,4 @@
+import { QuizResult } from './../../types/index';
 import { Component, inject } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -19,7 +20,11 @@ export class QuizJoinComponent {
   join() {
     if (this.code && this.name) {
       this.testService.getQuizByCode(this.code).subscribe((result) => {
-        console.log(result);
+        let quiz = result[0];
+        let UserQuiz: QuizResult = {
+          name: this.name,
+          quizId: quiz.id,
+        };
       });
     } else {
       alert('Please enter a code and a name');

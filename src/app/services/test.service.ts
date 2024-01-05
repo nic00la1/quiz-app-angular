@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Quiz } from '../types';
+import { Quiz, QuizResult } from '../types';
 
 @Injectable({
   providedIn: 'root',
@@ -13,4 +13,6 @@ export class TestService {
   getQuizByCode(code: string) {
     return this.http.get<Quiz[]>(`http://localhost:3000/quizs?code=${code}`);
   }
+
+  joinQuiz(quizResult: QuizResult) {}
 }
