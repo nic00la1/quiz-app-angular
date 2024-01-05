@@ -55,6 +55,9 @@ export class QuizComponent implements OnInit {
   submit() {
     this.next();
     this.calculateResult();
+    this.testService
+      .updateQuizResult(this.quizResult.id!, this.quizResult)
+      .subscribe();
     this.router.navigateByUrl('/quiz-score');
   }
 
@@ -85,5 +88,10 @@ export class QuizComponent implements OnInit {
       }
     });
     percentage = Math.round((score / totalMark) * 100);
+    this.quizResult.correct = correct;
+    this.quizResult.inCorrect = inCorrect;
+    this.quizResult.unAttempt = unAttempt;
+    this.quizResult.score = score;
+    this.quizResult.percentage = percentage;
   }
 }

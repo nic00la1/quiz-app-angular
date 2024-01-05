@@ -146,14 +146,88 @@
       "id": 1,
       "name": "Javascript quiz 1",
       "code": "jsquiz01",
-      "questions": [1, 2, 3, 5]
+      "questions": [
+        1,
+        2,
+        3,
+        5
+      ]
     },
     {
       "id": 1,
       "name": "Javascript quiz 2",
       "code": "jsquiz02",
-      "questions": [1, 2, 3, 4, 5]
+      "questions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
     }
   ],
-  "quizResults": []
+  "quizResults": [
+    {
+      "name": "Nicola",
+      "quizId": 1,
+      "response": [],
+      "id": 1
+    },
+    {
+      "name": "Nicola",
+      "quizId": 1,
+      "response": [
+        {
+          "questionId": 1,
+          "answerOptionId": "b"
+        },
+        {
+          "questionId": 2,
+          "answerOptionId": "c"
+        },
+        {
+          "questionId": 3,
+          "answerOptionId": "b"
+        },
+        {
+          "questionId": 5,
+          "answerOptionId": "c"
+        }
+      ],
+      "id": 2,
+      "correct": 1,
+      "inCorrect": 3,
+      "unAttempt": 0,
+      "score": -2,
+      "percentage": -50
+    },
+    {
+      "name": "nicola",
+      "quizId": 1,
+      "response": [
+        {
+          "questionId": 1,
+          "answerOptionId": "a"
+        },
+        {
+          "questionId": 2,
+          "answerOptionId": "c"
+        },
+        {
+          "questionId": 3,
+          "answerOptionId": "b"
+        },
+        {
+          "questionId": 5,
+          "answerOptionId": "c"
+        }
+      ],
+      "id": 3,
+      "correct": 1,
+      "inCorrect": 3,
+      "unAttempt": 0,
+      "score": -2,
+      "percentage": -50
+    }
+  ]
 }
