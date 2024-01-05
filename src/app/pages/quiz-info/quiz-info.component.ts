@@ -1,10 +1,8 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TestService } from '../../services/test.service';
 import { Quiz, QuizResult } from '../../types';
 import { Router } from '@angular/router';
-
 import { MatButtonModule } from '@angular/material/button';
-
 @Component({
   selector: 'app-quiz-info',
   standalone: true,
@@ -12,13 +10,13 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './quiz-info.component.html',
   styleUrl: './quiz-info.component.css',
 })
-export class QuizInfoComponent implements OnInit {
+export class QuizInfoComponent {
   testService = inject(TestService);
   quizInfo!: Quiz;
   router = inject(Router);
   quizResult!: QuizResult;
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.quizResult = this.testService.quizResult;
     if (!this.quizResult) {
       this.router.navigateByUrl('/');
@@ -29,7 +27,6 @@ export class QuizInfoComponent implements OnInit {
       this.quizInfo = quiz;
     });
   }
-
   start() {
     this.router.navigateByUrl('/quiz');
   }
