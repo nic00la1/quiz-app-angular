@@ -4,6 +4,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { TestService } from '../../services/test.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-quiz-join',
@@ -16,6 +17,7 @@ export class QuizJoinComponent {
   code!: string;
   name!: string;
   testService = inject(TestService);
+  router = inject(Router);
 
   join() {
     if (this.code && this.name) {
@@ -26,7 +28,8 @@ export class QuizJoinComponent {
           quizId: quiz.id,
         };
         this.testService.joinQuiz(quizResult).subscribe((response) => {
-          console.log(response);
+          this.testService.quizResult = response;
+          this.router.navigateByUrl('/quiz-info');
         });
       });
     } else {
